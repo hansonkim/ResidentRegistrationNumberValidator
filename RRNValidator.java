@@ -19,7 +19,7 @@ public class RRNValidator {
             sum += j * LOGIC_NUM[i];
         }
         int checkNum = sum % 11 == 0 ? 1 : 11 - (sum % 11);
-        return (checkNum == j);
+        return (checkNum == Character.getNumericValue(regNum.charAt(regNum.length()-1)));
     }
 
     public static boolean isNumeric(String str) {
