@@ -18,7 +18,7 @@ public class RRNValidator {
             j = Character.getNumericValue(regNum.charAt(i));
             sum += j * LOGIC_NUM[i];
         }
-        int checkNum = sum % 11 == 0 ? 1 : 11 - (sum % 11);
+        int checkNum = (sum % 11 == 0 ? 1 : 11 - (sum % 11))%10;
         return (checkNum == Character.getNumericValue(regNum.charAt(regNum.length()-1)));
     }
 
